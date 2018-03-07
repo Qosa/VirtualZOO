@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="animals.view.EditViewController">
+   <center>
+      <VBox fx:id="genreVBox" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="titleLabel" text="Edytuj">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <GridPane fx:id="genreGridPane">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="90.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="310.0" minWidth="10.0" prefWidth="310.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="label1" text="Label" />
+                  <Label fx:id="label2" text="Label" GridPane.rowIndex="1" />
+                  <Label fx:id="label3" text="Label" GridPane.rowIndex="2" />
+                  <TextField fx:id="editName" GridPane.columnIndex="1" />
+                  <TextField fx:id="editField1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="editField2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#setEditedFields" text="Zatwierdz" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="animals.view.TreeViewController">
+   <top>
+      <Label text="Atlas Zwierząt" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TreeView fx:id="animalsTreeView" onMouseClicked="#goAnimal" prefHeight="200.0" prefWidth="200.0" showRoot="false" BorderPane.alignment="CENTER">
+         <contextMenu>
+            <ContextMenu fx:id="eddelMenu">
+              <items>
+                <MenuItem fx:id="Usun" mnemonicParsing="false" onAction="#deleteItemOnAction" text="Usun" />
+                  <Menu mnemonicParsing="false" text="Sortuj">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#sortOnAction" text="Rosnąco" />
+                      <MenuItem mnemonicParsing="false" onAction="#revSortOnAction" text="Malejąco" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="Edytuj" mnemonicParsing="false" onAction="#editItemOnAction" text="Edytuj" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TreeView>
+   </center>
+</BorderPane>
